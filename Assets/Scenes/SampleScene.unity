@@ -215,8 +215,9 @@ GameObject:
   - component: {fileID: 924289503}
   - component: {fileID: 924289502}
   - component: {fileID: 924289501}
+  - component: {fileID: 924289505}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,3 +319,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &924289505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924289500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c00f9e983e17b44b89718d4edcd32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceRatio: 300
+  bulletPrefab: {fileID: 5499671392343195361, guid: c4c06272ad400484789dc002760f1c86,
+    type: 3}
