@@ -7,12 +7,13 @@ public class Shooting : MonoBehaviour
 
     public float forceRatio;
     public GameObject bulletPrefab;
-    
+
+    private AudioManager myAudio;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        myAudio = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -29,6 +30,7 @@ public class Shooting : MonoBehaviour
             direction = direction.normalized;
             //direction.Normalize();
             GameObject bullet = Instantiate(bulletPrefab, this.transform.position, Quaternion.identity) as GameObject;
+            myAudio.PlayAudio("laserAttack");
             //Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             Projectile proj =bullet.GetComponent<Projectile>();
             proj.SetDirection(direction);
