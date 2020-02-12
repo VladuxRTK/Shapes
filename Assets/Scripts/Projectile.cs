@@ -15,10 +15,7 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.velocity = dir * speed;
-        initialPos = this.transform.position;
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        Initialization();
     }
 
     // Update is called once per frame
@@ -33,4 +30,14 @@ public class Projectile : MonoBehaviour
     {
         this.dir = dir;
     }
+
+    private void Initialization()
+    {
+
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = dir * speed;
+        initialPos = this.transform.position;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    }
 }
+
